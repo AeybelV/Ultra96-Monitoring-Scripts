@@ -1,0 +1,11 @@
+[Unit]
+Description=Ultra96 Stats monitor by Aeybel Varghese
+
+[Service]
+WorkingDirectory=/home/ee382n/
+User=ee382n
+ExecStart=/usr/bin/python3 /home/ee382n/monitoring_scripts/temp_monitor.py broker.emqx.io 1883 ece382/aeybel-jason/temp ultra96
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
